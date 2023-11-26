@@ -23,7 +23,7 @@ resource "aws_lb_listener" "main" {
     }
   }
 }
-
+/*
 resource "aws_lb_listener" "frontend" {
   count             = var.internal ? 0 : 1
   load_balancer_arn = aws_lb.main.arn
@@ -39,7 +39,7 @@ resource "aws_lb_listener" "frontend" {
       status_code = "HTTP_301"
     }
   }
-}
+}*/
 
 resource "aws_security_group" "main" {
   name        = local.sg_name
